@@ -3,8 +3,8 @@
 <style name="Zonglovani" parent="@style/Theme.AppCompat.Light">
     <item name="android:windowBackground">@color/zs_bg</item>
     <item name="android:colorBackground">@color/zs_bg</item>
-		<item name="android:colorPrimary">@color/zs_header</item>
-		<item name="android:colorPrimaryDark">@color/zs_header</item>
-		<item name="android:navigationBarColor">@color/zs_header</item>
+    <item name="android:colorPrimary">@color/zs_header</item>
+    <item name="android:colorPrimaryDark">@color/zs_header</item>
+    <item name="android:navigationBarColor">@color/zs_header</item>
 </style>
 </resources>
