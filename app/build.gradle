@@ -5,7 +5,7 @@ ext {
   gitVersionName = grgit.describe()
   dirty = !grgit.status().clean
   if(dirty) gitVersionName = gitVersionName + '-dirty'
-  gitVersionCode = 22 + grgit.log().size()
+  gitVersionCode = grgit.log().size()
 }
 
 task printVersionName() {
@@ -62,8 +62,7 @@ task generateIcons(type: Exec) {
 }
 
 task customClean(type: Delete) {
-    delete "${projectDir}/../templates_c"
-    delete "${projectDir}/../vendor"
+    delete "${projectDir}/../app/src/main/assets/www"
     delete "src/main/res/mipmap-hdpi"
     delete "src/main/res/mipmap-mdpi"
     delete "src/main/res/mipmap-xhdpi"
