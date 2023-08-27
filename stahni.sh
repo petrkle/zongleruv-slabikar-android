@@ -6,6 +6,8 @@ WGET=${WGET:-wget}
 
 ZSDIR=app/src/main/assets/www
 
+URL=http://localhost:4567
+
 rm -rf $ZSDIR
 
 $WGET \
@@ -20,11 +22,11 @@ $WGET \
         --directory-prefix=$ZSDIR \
         --no-host-directories \
         --reject '*.pdf,odkazy.html,mobil.html,navody.html,jak-odkazovat.html,toolbox.html' \
-        -X animace/siteswap,animace/en,ulita,navody,scripts,download,olympiada,mdz,g,valentyn \
-        http://localhost:4567/
+        -X animace/siteswap,animace/en,ulita,navody,download\
+        $URL
 
 $WGET \
         --quiet \
         --directory-prefix=$ZSDIR \
         --no-host-directories \
-          "http://localhost:4567`grep svg app/src/main/assets/www/*.js | awk -F '"' '{print $2}'`"
+          "$URL`grep svg app/src/main/assets/www/*.js | awk -F '"' '{print $2}'`"
