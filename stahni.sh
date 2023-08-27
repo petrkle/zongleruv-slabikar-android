@@ -21,7 +21,7 @@ $WGET \
         --page-requisites \
         --directory-prefix=$ZSDIR \
         --no-host-directories \
-        --reject '*.pdf,odkazy.html,mobil.html,navody.html,jak-odkazovat.html,toolbox.html' \
+        --reject '*.pdf,odkazy.html,mobil.*,navody.html,jak-odkazovat.html' \
         -X animace/siteswap,animace/en,ulita,navody,download\
         $URL
 
