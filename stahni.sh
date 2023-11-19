@@ -2,6 +2,8 @@
 
 set -e
 
+LC_ALL=C
+
 WGET=${WGET:-wget}
 
 ZSDIR=app/src/main/assets/www
@@ -12,7 +14,8 @@ rm -rf $ZSDIR
 
 $WGET \
         -e "robots=off" \
-        --quiet \
+        --verbose \
+        --output-file=log.txt \
         --html-extension \
         --no-parent \
         --no-directories \

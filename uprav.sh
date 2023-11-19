@@ -8,7 +8,9 @@ for foo in `find $ZSDIR -name '*.html'`;
 do
   sed -i 's#http://localhost:4567#https://zonglovani.info#g' $foo
   sed -i 's/zongl\.info/zonglovani.info/g' $foo
-  sed -i '/<script defer src="s/d' $foo
+  sed -i '/<link rel="manifest/d' $foo
 done
 
-sed -i 's/margin-right:5em;//;' $ZSDIR/*.css
+php uprav.php
+
+sed '/p:"\//d' $ZSDIR/*.js -i
