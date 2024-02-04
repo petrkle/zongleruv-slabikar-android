@@ -22,6 +22,7 @@ clean:
 	gradle clean
 	rm -rf build .gradle
 	rm -rf tmp
+	rm -rf log.txt
 
 fastlane:
 	bundle update
