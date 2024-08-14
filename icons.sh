@@ -15,6 +15,6 @@ do
   for baz in launcher launcher_round
   do
     [ -d ${RES}-${icon[$foo]} ] || mkdir -p ${RES}-${icon[$foo]}
-    convert -resize ${foo}x${foo} google-play-graphics/hires-icon.png ${RES}-${icon[$foo]}/ic_${baz}.png
+    magick google-play-graphics/hires-icon.png -resize ${foo}x${foo} ${RES}-${icon[$foo]}/ic_${baz}.png
   done
 done
