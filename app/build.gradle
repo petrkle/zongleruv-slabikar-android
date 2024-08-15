@@ -27,8 +27,8 @@ android {
         targetSdkVersion 35
         versionCode gitVersionCode
         versionName "${gitVersionName}"
-        setProperty("archivesBaseName", "Zongleruv-slabikar")
     }
+    base.archivesName = "Zongleruv-slabikar"
     signingConfigs {
         release
     }
