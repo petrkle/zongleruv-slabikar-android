@@ -28,7 +28,7 @@
   android:launchMode="singleTop"
   android:name="Zonglovani"
   android:windowSoftInputMode="adjustResize"
-  android:theme="@style/Zonglovani"
+  android:theme="@style/Theme.App.SplashScreen"
   android:exported="true"
 >
 
