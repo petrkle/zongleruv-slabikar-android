@@ -9,3 +9,4 @@ local.properties
 fastlane/README.md
 fastlane/report.xml
 log.txt
+*.cache
