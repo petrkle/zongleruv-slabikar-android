@@ -20,7 +20,7 @@ android {
 
 android {
     compileSdkVersion 35
-    namespace "info.zonglovani.mobile.app"
+    namespace = "info.zonglovani.mobile.app"
     defaultConfig {
         applicationId "info.zonglovani.mobile.app"
         minSdkVersion 24
@@ -35,14 +35,15 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            signingConfig signingConfigs.release
+            signingConfig = signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
 }
 
 dependencies {
-    implementation 'org.apache.cordova:framework:13.0.0'
+    implementation 'org.apache.cordova:framework:14.0.0'
+    implementation(platform('org.jetbrains.kotlin:kotlin-bom:2.0.20'))
 }
 
 task gethtml(type: Exec, dependsOn: ['generateIcons', 'stahni']) {
