@@ -19,12 +19,12 @@ android {
 }
 
 android {
-    compileSdkVersion 35
+    compileSdkVersion 36
     namespace = "info.zonglovani.mobile.app"
     defaultConfig {
         applicationId "info.zonglovani.mobile.app"
         minSdkVersion 24
-        targetSdkVersion 35
+        targetSdkVersion 36
         versionCode gitVersionCode
         versionName "${gitVersionName}"
     }
